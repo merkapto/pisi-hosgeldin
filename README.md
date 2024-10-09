@@ -6,13 +6,18 @@ Installation and Running
 
 After downloading or cloning this repository, open a terminal in directory that this repository has been downloaded or cloned into and run that command for run:
 
-you can run that in any directory:
+you can run that in directory:
 
-hosgeldin
+python3 hosgeldin.py
+
+~or~
+
+./hosgeldin.py
 
 Versioning
 
 2.X is final version currently.
+
 Artwork
 
 Muhammed Yılmaz (ecz.muhammed at gmail dot com)
