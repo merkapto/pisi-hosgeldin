@@ -39,17 +39,44 @@ def main():
 
 
     #container
-    txt_widget = tk.Text(root, width=100, height=7, font=("System", 10), wrap=WORD)
+    txt_widget = tk.Text(root, width=100, height=7, font=("System", 10), wrap=WORD, bd=0, highlightthickness=0)
     txt = "\nPisi Linux'a Hoş Geldiniz!.. Topluluğumuza katıldığınız için teşekkür ederiz! \n\nPisi Linux geliştiricileri olarak Pisi Linux'u kullanmaktan zevk almanızı umuyoruz. Aşağıdaki bağlantılar Pisi Linux kullanmanıza kılavuzluk edecektir. Lütfen deneyimlerinizi, önerilerinizi ve karşılaştığınız hataları bize bildirmekten çekinmeyiniz."""
     txt_widget.tag_configure("tag", justify="center")
     txt_widget.insert("1.0", txt)
     txt_widget.tag_add("tag", "1.0", "end")
     txt_widget.pack(fill="both")
 
+    #grid
+    frm_link = tk.Frame(root, bg="white")
+    frm_link.pack(fill="both")
 
-    link_pisi_kilavuzu = tk.Label(root, text="Pisi Kılavuzu", cursor="hand2")
+    #1. kolon
+    lbl_belgeler = tk.Label(frm_link, text="Belgeler", font=("System", 16, "bold"), bg="white")
+    lbl_belgeler.grid(row=0, column=0, padx=50, pady=5)
+    
+    img_pisi_kilavuzu = tk.PhotoImage(file="images/guide-32.png")
+    link_pisi_kilavuzu = tk.Label(frm_link, image=img_pisi_kilavuzu, text="Pisi Kılavuzu", compound="left", cursor="hand2", bg="white")
     link_pisi_kilavuzu.bind("<Button-1>", lambda e: callback("https://pisilinux.org/en/pisilinux-kurulumu/"))
-    link_pisi_kilavuzu.pack()
+    link_pisi_kilavuzu.grid(row=1, column=0, padx=50, pady=10)
+
+    img_surum_notlari = tk.PhotoImage(file="images/info-24.png")
+    link_surum_notlari = tk.Label(frm_link, image=img_surum_notlari, text="Sürüm Notları", compound="left", cursor="hand2", bg="white")
+    link_surum_notlari.bind("<Button-1>", lambda e: callback("file:///usr/share/pisilinux-welcome/data/release-notes/release-notes-tr.html"))
+    link_surum_notlari.grid(row=2, column=0, padx=50, pady=10)
+
+    img_pisi_wiki = tk.PhotoImage(file="images/wiki-24.png")
+    link_pisi_wiki = tk.Label(frm_link, image=img_pisi_wiki, text="Pisi Linux Wiki", compound="left", cursor="hand2", bg="white")
+    link_pisi_wiki.bind("<Button-1>", lambda e: callback("https://pisilinux.org/wiki/"))
+    link_pisi_wiki.grid(row=3, column=0, padx=50, pady=10)
+
+    #2. kolon
+    lbl_destek = tk.Label(frm_link, text="Destek", font=("System", 16, "bold"), bg="white")
+    lbl_destek.grid(row=0, column=1, padx=50, pady=5)
+
+
+    #3. kolon
+    lbl_proje = tk.Label(frm_link, text="Proje", font=("System", 16, "bold"), bg="white")
+    lbl_proje.grid(row=0, column=2, padx=50, pady=5)
     
 
     #footer
