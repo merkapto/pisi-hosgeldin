@@ -1,0 +1,6 @@
+pybabel --list-locales
+mkdir locale
+pybabel extract . -o locale/base.pot
+pybabel init -l en_US de_DE fr_FR tr_TR -i locale/base.pot -d locale
+pybabel compile -d locale
+pybabel update -i locale/base.pot -d locale
