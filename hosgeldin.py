@@ -56,7 +56,7 @@ def main():
 
 
     #container
-    txt_widget = tk.Text(root, padx=50, height=7, font=("System", 10), wrap=WORD, bd=0, highlightthickness=0)
+    txt_widget = tk.Text(root, padx=50, height=7, font=("Noto", 10), wrap=WORD, bd=0, highlightthickness=0)
     txt = _("\nPisi Linux'a Hoş Geldiniz!.. Topluluğumuza katıldığınız için teşekkür ederiz! \n\nPisi Linux geliştiricileri olarak Pisi Linux'u kullanmaktan zevk almanızı umuyoruz. Aşağıdaki bağlantılar Pisi Linux kullanmanıza kılavuzluk edecektir. Lütfen deneyimlerinizi, önerilerinizi ve karşılaştığınız hataları bize bildirmekten çekinmeyiniz.""")
     txt_widget.tag_configure("tag", justify="center")
     txt_widget.insert("1.0", txt)
@@ -64,12 +64,12 @@ def main():
     txt_widget.pack(fill="both")
 
     #grid
-    frm_link = tk.Frame(root, padx=50, pady=30, bg="white")
+    frm_link = tk.Frame(root, pady=33, bg="white")
     frm_link.pack(fill="both")
 
     #1. kolon
-    lbl_belgeler = tk.Label(frm_link, text=_("Belgeler"), font=("System", 14, "bold"), bg="white", padx=50)
-    lbl_belgeler.grid(row=0, column=0)
+    lbl_belgeler = tk.Label(frm_link, text=_("Belgeler"), font=("Noto", 12, "bold"), bg="white", width=10)
+    lbl_belgeler.grid(row=0, column=0, padx=50)
     
     img_pisi_kilavuzu = tk.PhotoImage(file="images/guide-32.png")
     link_pisi_kilavuzu = tk.Label(frm_link, image=img_pisi_kilavuzu, text=_("Pisi Kılavuzu"), compound="left", cursor="hand2", bg="white")
@@ -87,8 +87,8 @@ def main():
     link_pisi_wiki.grid(row=3, column=0)
 
     #2. kolon
-    lbl_destek = tk.Label(frm_link, text=_("Destek"), font=("System", 14, "bold"), bg="white", padx=50)
-    lbl_destek.grid(row=0, column=1)
+    lbl_destek = tk.Label(frm_link, text=_("Destek"), font=("Noto", 12, "bold"), bg="white", width=12)
+    lbl_destek.grid(row=0, column=1, padx=50)
 
     img_forum = tk.PhotoImage(file="images/forum-36.png")
     link_forum = tk.Label(frm_link, image=img_forum, text=_("Pisi Forum Sayfası"), compound="left", cursor="hand2", bg="white")
@@ -106,8 +106,8 @@ def main():
     link_pisi_hatalari.grid(row=3, column=1)
 
     #3. kolon
-    lbl_proje = tk.Label(frm_link, text=_("Proje"), font=("System", 14, "bold"), bg="white", padx=50)
-    lbl_proje.grid(row=0, column=2)
+    lbl_proje = tk.Label(frm_link, text=_("Proje"), font=("Noto", 12, "bold"), bg="white", width=10)
+    lbl_proje.grid(row=0, column=2, padx=50)
 
     img_kaptan = tk.PhotoImage(file="images/kaptan-36.png")
     link_kaptan = tk.Label(frm_link, image=img_kaptan, text=_("Kaptan'ı Başlat"), compound="left", cursor="hand2", bg="white")
