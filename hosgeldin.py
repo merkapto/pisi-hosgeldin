@@ -3,24 +3,15 @@
 
 import tkinter as tk
 from tkinter import *
-from tkinter import ttk
 import os, shutil, platform, distro, webbrowser
 import gettext, locale, sys
 
-# def lang_change():
-#     dil = locale.getlocale()
-#     dil_chr = dil[0]
-#     lang = gettext.translation("messages", localedir="locale", languages=dil_chr)
-#     lang.install()
-#     # print(dil_chr)
-#     # return dil_chr
-# lang_change()
 
 gettext.bindtextdomain("messages", locale)
 gettext.textdomain("messages")
 
-locale = sys.argv[1] if len(sys.argv) > 1 else "tr"
-# locale.setlocale(locale.LC_ALL, "en")
+user_locale = locale.getlocale()[0]
+locale = sys.argv[1] if len(sys.argv) > 1 else user_locale
 lang = gettext.translation("messages", localedir="locale", fallback=True, languages=[locale])
 lang.install()
 _ = lang.gettext
