@@ -5,9 +5,25 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 import os, shutil, platform, distro, webbrowser
-import gettext
+import gettext, locale, sys
 
-_ = gettext.gettext
+# def lang_change():
+#     dil = locale.getlocale()
+#     dil_chr = dil[0]
+#     lang = gettext.translation("messages", localedir="locale", languages=dil_chr)
+#     lang.install()
+#     # print(dil_chr)
+#     # return dil_chr
+# lang_change()
+
+gettext.bindtextdomain("messages", locale)
+gettext.textdomain("messages")
+
+locale = sys.argv[1] if len(sys.argv) > 1 else "tr"
+# locale.setlocale(locale.LC_ALL, "en")
+lang = gettext.translation("messages", localedir="locale", fallback=True, languages=[locale])
+lang.install()
+_ = lang.gettext
 
 def callback(url):
     webbrowser.open_new(url)
@@ -52,7 +68,7 @@ def main():
     frm_link.pack(fill="both")
 
     #1. kolon
-    lbl_belgeler = tk.Label(frm_link, text=_("Belgeler"), font=("System", 16, "bold"), bg="white", padx=50)
+    lbl_belgeler = tk.Label(frm_link, text=_("Belgeler"), font=("System", 14, "bold"), bg="white", padx=50)
     lbl_belgeler.grid(row=0, column=0)
     
     img_pisi_kilavuzu = tk.PhotoImage(file="images/guide-32.png")
@@ -71,7 +87,7 @@ def main():
     link_pisi_wiki.grid(row=3, column=0)
 
     #2. kolon
-    lbl_destek = tk.Label(frm_link, text=_("Destek"), font=("System", 16, "bold"), bg="white", padx=50)
+    lbl_destek = tk.Label(frm_link, text=_("Destek"), font=("System", 14, "bold"), bg="white", padx=50)
     lbl_destek.grid(row=0, column=1)
 
     img_forum = tk.PhotoImage(file="images/forum-36.png")
@@ -90,7 +106,7 @@ def main():
     link_pisi_hatalari.grid(row=3, column=1)
 
     #3. kolon
-    lbl_proje = tk.Label(frm_link, text=_("Proje"), font=("System", 16, "bold"), bg="white", padx=50)
+    lbl_proje = tk.Label(frm_link, text=_("Proje"), font=("System", 14, "bold"), bg="white", padx=50)
     lbl_proje.grid(row=0, column=2)
 
     img_kaptan = tk.PhotoImage(file="images/kaptan-36.png")

@@ -20,7 +20,7 @@ msgstr ""
 
 #: hosgeldin.py:19
 msgid "Pisi Linux'a Hoş Geldiniz"
-msgstr ""
+msgstr "Pisi Linux'a Hoş Geldiniz"
 
 #: hosgeldin.py:44
 msgid ""
@@ -33,14 +33,22 @@ msgid ""
 "edecektir. Lütfen deneyimlerinizi, önerilerinizi ve karşılaştığınız "
 "hataları bize bildirmekten çekinmeyiniz."
 msgstr ""
+"\n"
+"Pisi Linux'a Hoş Geldiniz!.. Topluluğumuza katıldığınız için teşekkür "
+"ederiz! \n"
+"\n"
+"Pisi Linux geliştiricileri olarak Pisi Linux'u kullanmaktan zevk almanızı"
+" umuyoruz. Aşağıdaki bağlantılar Pisi Linux kullanmanıza kılavuzluk "
+"edecektir. Lütfen deneyimlerinizi, önerilerinizi ve karşılaştığınız "
+"hataları bize bildirmekten çekinmeyiniz."
 
 #: hosgeldin.py:55
 msgid "Belgeler"
-msgstr ""
+msgstr "Belgeler"
 
 #: hosgeldin.py:59
 msgid "Pisi Kılavuzu"
-msgstr ""
+msgstr "Pisi Kılavuzu"
 
 #: hosgeldin.py:64
 msgid "Sürüm Notları"

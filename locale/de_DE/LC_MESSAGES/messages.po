@@ -20,7 +20,7 @@ msgstr ""
 
 #: hosgeldin.py:19
 msgid "Pisi Linux'a Hoş Geldiniz"
-msgstr ""
+msgstr "Willkommen bei PisiLinux"
 
 #: hosgeldin.py:44
 msgid ""
@@ -36,53 +36,53 @@ msgstr ""
 
 #: hosgeldin.py:55
 msgid "Belgeler"
-msgstr ""
+msgstr "Unterlagen"
 
 #: hosgeldin.py:59
 msgid "Pisi Kılavuzu"
-msgstr ""
+msgstr "Pisi Führer"
 
 #: hosgeldin.py:64
 msgid "Sürüm Notları"
-msgstr ""
+msgstr "Versionshinweis"
 
 #: hosgeldin.py:69
 msgid "Pisi Linux Wiki"
-msgstr ""
+msgstr "Pisi Wiki"
 
 #: hosgeldin.py:74
 msgid "Destek"
-msgstr ""
+msgstr "Unterstützung"
 
 #: hosgeldin.py:78
 msgid "Pisi Forum Sayfası"
-msgstr ""
+msgstr "Pisi Forum"
 
 #: hosgeldin.py:83
 msgid "PisiLinux Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: hosgeldin.py:88
 msgid "PisiLinux Hataları"
-msgstr ""
+msgstr "Fehlerbericht"
 
 #: hosgeldin.py:93
 msgid "Proje"
-msgstr ""
+msgstr "Projekt"
 
 #: hosgeldin.py:97
 msgid "Kaptan'ı Başlat"
-msgstr ""
+msgstr "Start Kaptan"
 
 #: hosgeldin.py:103
 msgid "Bize Katılın"
-msgstr ""
+msgstr "Treffen Sie uns"
 
 #: hosgeldin.py:108
 msgid "Pisi AnaSayfa"
-msgstr ""
+msgstr "Homepage"
 
 #: hosgeldin.py:163
 msgid "Sistem açılışında göster"
-msgstr ""
+msgstr "Beim start anzeigen"
 
