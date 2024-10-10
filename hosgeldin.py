@@ -11,6 +11,12 @@ gettext.bindtextdomain("messages", locale)
 gettext.textdomain("messages")
 
 user_locale = locale.getlocale()[0]
+if user_locale == "tr_TR":
+    user_locale = "tr_TR"
+elif user_locale == "de_DE":
+    user_locale = "de_DE"
+else:
+    user_locale = "en_US"
 locale = sys.argv[1] if len(sys.argv) > 1 else user_locale
 lang = gettext.translation("messages", localedir="locale", fallback=True, languages=[locale])
 lang.install()
