@@ -1,3 +1,5 @@
+![screenshot](pisi-hosgeldin.png)
+
 Pisi Linux Welcome Application
 
 A welcome application that meets the user on Live CD mode and after installation in Pisi Linux. It has been written with Python 3.x and Tkinter.
@@ -10,7 +12,7 @@ you can run that in directory:
 
 python3 hosgeldin.py
 
-~or~
+or
 
 ./hosgeldin.py
 
